@@ -20,6 +20,8 @@ set bs=2
 " Exceptions
 autocmd FileType make set noexpandtab 
 autocmd FileType make set tabstop=4
+autocmd FileType go   set noexpandtab
+autocmd FileType go   set tabstop=2
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
@@ -29,8 +31,10 @@ call plug#begin()
 Plug 'junegunn/vim-easy-align'
 Plug 'ervandew/supertab'
 Plug 'hashivim/vim-terraform'
+Plug 'hashivim/vim-vagrant'
 Plug 'itchyny/lightline.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'PProvost/vim-ps1'
 
 Plug 'vim-scripts/vibrantink'
 call plug#end()
