@@ -16,6 +16,7 @@ set incsearch
 set hlsearch
 set laststatus=2
 set bs=2
+set nocompatible
 
 " Exceptions
 autocmd FileType make set noexpandtab 
@@ -36,13 +37,10 @@ endif
 call plug#begin()
 Plug 'junegunn/vim-easy-align'
 Plug 'ervandew/supertab'
-Plug 'hashivim/vim-terraform'
-Plug 'hashivim/vim-vagrant'
 Plug 'itchyny/lightline.vim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'PProvost/vim-ps1'
-
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'vim-scripts/vibrantink'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 
